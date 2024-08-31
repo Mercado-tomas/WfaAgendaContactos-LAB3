@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Data;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace WfaAgendaContactos.Controlador
 {
@@ -84,5 +85,59 @@ namespace WfaAgendaContactos.Controlador
                 MessageBox.Show("Error al eliminar el contacto."+e,"Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
+
+        // metodo para modificar contacto
+        public void ModificarContacto(int id,string nombre, string apellido, string telefono, string correo, string categoria)
+        {
+            try
+            {
+                using (OleDbConnection conexion = new OleDbConnection(ruta)) {
+                    conexion.Open();
+                    string query = "UPDATE DbContactos SET Nombre=@nombre,Apellido=@apellido,Teléfono=@telefono,Correo=@correo,Categoría=@categoria WHERE Id = @id";
+                    using (OleDbCommand comando = new OleDbCommand(query,conexion)) {
+                        comando.Parameters.AddWithValue("@nombre", nombre);
+                        comando.Parameters.AddWithValue("@apellido", apellido);
+                        comando.Parameters.AddWithValue("@telefono", telefono);
+                        comando.Parameters.AddWithValue("@correo", correo);
+                        comando.Parameters.AddWithValue("@categoria", categoria);
+                        comando.Parameters.AddWithValue("@Id", id);
+
+                        int rowsAfectados = comando.ExecuteNonQuery();
+                        if (rowsAfectados == 0) {
+                            throw new Exception("No se encontró el contacto con el ID especificado.");
+                        }
+                    }
+                
+                }
+            }
+            catch (Exception e) {
+                MessageBox.Show("Error al modificar el contacto"+e,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        // metodo para buscar contactos
+        public DataTable BuscarContactoNombre(string nombre) { 
+            DataTable dtContacto = new DataTable();
+            try
+            {
+                using (OleDbConnection conexion = new OleDbConnection(ruta)) {
+                    conexion.Open();
+                    string query = "SELECT * FROM DbContactos WHERE Nombre Like @nombre";
+                    using (OleDbCommand comando = new OleDbCommand(query,conexion)) {
+                        comando.Parameters.AddWithValue("@nombre","%"+nombre+"%");
+                        using (OleDbDataAdapter adaptador = new OleDbDataAdapter(comando)) {
+                            adaptador.Fill(dtContacto);
+                        }
+                    }
+                }
+            }
+            catch (Exception e) {
+                MessageBox.Show("No se pudo realizar la busqueda"+e,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+
+                return dtContacto;
+        }
+    
     }
 }

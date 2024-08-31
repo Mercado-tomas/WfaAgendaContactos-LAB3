@@ -87,6 +87,7 @@
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
             this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarToolStripMenuItem.Text = "Modificar";
+            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
@@ -108,20 +109,23 @@
             // nombreToolStripMenuItem
             // 
             this.nombreToolStripMenuItem.Name = "nombreToolStripMenuItem";
-            this.nombreToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.nombreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nombreToolStripMenuItem.Text = "Nombre";
+            this.nombreToolStripMenuItem.Click += new System.EventHandler(this.nombreToolStripMenuItem_Click);
             // 
             // teléfonoToolStripMenuItem
             // 
             this.teléfonoToolStripMenuItem.Name = "teléfonoToolStripMenuItem";
-            this.teléfonoToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.teléfonoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.teléfonoToolStripMenuItem.Text = "Teléfono";
+            this.teléfonoToolStripMenuItem.Click += new System.EventHandler(this.teléfonoToolStripMenuItem_Click);
             // 
             // emailToolStripMenuItem
             // 
             this.emailToolStripMenuItem.Name = "emailToolStripMenuItem";
-            this.emailToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.emailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.emailToolStripMenuItem.Text = "E-mail";
+            this.emailToolStripMenuItem.Click += new System.EventHandler(this.emailToolStripMenuItem_Click);
             // 
             // exportarContactosToolStripMenuItem
             // 

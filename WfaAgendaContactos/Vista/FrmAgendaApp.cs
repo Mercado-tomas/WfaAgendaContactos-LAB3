@@ -58,5 +58,29 @@ namespace WfaAgendaContactos.Vista
             Eliminar frmEliminar = new Eliminar();
             frmEliminar.Show();
         }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmModificar frmModificar = new FrmModificar();
+            frmModificar.Show();
+        }
+
+        private void nombreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBuscarNombre frmBuscarNombre = new FrmBuscarNombre();
+            frmBuscarNombre.Show();
+        }
+
+        private void teléfonoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBuscarTelefono frmBuscarTelefono = new FrmBuscarTelefono();
+            frmBuscarTelefono.Show();
+        }
+
+        private void emailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBuscarCorreo frmBuscarCorreo = new FrmBuscarCorreo();
+            frmBuscarCorreo.Show();
+        }
     }
 }

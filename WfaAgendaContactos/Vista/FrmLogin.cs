@@ -26,6 +26,7 @@ namespace WfaAgendaContactos
         {
             FrmAgendaApp frmAgendaApp = new FrmAgendaApp();
             frmAgendaApp.Show();
+            
         }
     }
 }
