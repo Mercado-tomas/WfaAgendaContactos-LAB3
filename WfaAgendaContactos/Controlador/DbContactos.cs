@@ -138,6 +138,70 @@ namespace WfaAgendaContactos.Controlador
 
                 return dtContacto;
         }
-    
+        // Método para buscar contactos por correo
+        public DataTable BuscarContactoCorreo(string correo)
+        {
+            DataTable dtContacto = new DataTable();
+            try
+            {
+                using (OleDbConnection conexion = new OleDbConnection(ruta))
+                {
+                    conexion.Open();
+
+                    // Consulta para buscar contactos por correo
+                    string query = "SELECT * FROM DbContactos WHERE Correo LIKE @correo";
+
+                    using (OleDbCommand comando = new OleDbCommand(query, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@correo", "%" + correo + "%");
+
+                        using (OleDbDataAdapter adaptador = new OleDbDataAdapter(comando))
+                        {
+                            adaptador.Fill(dtContacto);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No se pudo realizar la búsqueda: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return dtContacto;
+        }
+
+        // Método para buscar contactos por teléfono
+        public DataTable BuscarContactoTelefono(string telefono)
+        {
+            DataTable dtContacto = new DataTable();
+            try
+            {
+                using (OleDbConnection conexion = new OleDbConnection(ruta))
+                {
+                    conexion.Open();
+
+                    // Consulta para buscar contactos por teléfono
+                    string query = "SELECT * FROM DbContactos WHERE Teléfono LIKE @telefono";
+
+                    using (OleDbCommand comando = new OleDbCommand(query, conexion))
+                    {
+                        comando.Parameters.AddWithValue("@telefono", "%" + telefono + "%");
+
+                        using (OleDbDataAdapter adaptador = new OleDbDataAdapter(comando))
+                        {
+                            adaptador.Fill(dtContacto);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No se pudo realizar la búsqueda: " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return dtContacto;
+        }
+
+
     }
 }

@@ -22,7 +22,7 @@ namespace WfaAgendaContactos.Vista
         {
             FrmAgendaApp frmAgendaApp = new FrmAgendaApp();
             frmAgendaApp.ShowDialog();
-            this.Close();
+            Hide();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

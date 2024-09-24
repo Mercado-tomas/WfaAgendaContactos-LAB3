@@ -120,8 +120,14 @@
     <EmbeddedResource Include="Vista\FrmAgregarContacto.resx">
       <DependentUpon>FrmAgregarContacto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmBuscarCorreo.resx">
+      <DependentUpon>FrmBuscarCorreo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmBuscarNombre.resx">
       <DependentUpon>FrmBuscarNombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmBuscarTelefono.resx">
+      <DependentUpon>FrmBuscarTelefono.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmEliminar.resx">
       <DependentUpon>FrmEliminar.cs</DependentUpon>
