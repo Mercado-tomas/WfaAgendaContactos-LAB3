@@ -46,5 +46,10 @@ namespace WfaAgendaContactos.Vista
                 MessageBox.Show("Ingrese un nombre válido para buscar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

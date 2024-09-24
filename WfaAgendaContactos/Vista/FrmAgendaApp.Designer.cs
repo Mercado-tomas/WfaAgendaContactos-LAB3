@@ -110,21 +110,21 @@
             // 
             this.nombreToolStripMenuItem.Name = "nombreToolStripMenuItem";
             this.nombreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nombreToolStripMenuItem.Text = "Nombre";
+            this.nombreToolStripMenuItem.Text = "Buscar por Nombre";
             this.nombreToolStripMenuItem.Click += new System.EventHandler(this.nombreToolStripMenuItem_Click);
             // 
             // teléfonoToolStripMenuItem
             // 
             this.teléfonoToolStripMenuItem.Name = "teléfonoToolStripMenuItem";
             this.teléfonoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.teléfonoToolStripMenuItem.Text = "Teléfono";
+            this.teléfonoToolStripMenuItem.Text = "Buscar por Teléfono";
             this.teléfonoToolStripMenuItem.Click += new System.EventHandler(this.teléfonoToolStripMenuItem_Click);
             // 
             // emailToolStripMenuItem
             // 
             this.emailToolStripMenuItem.Name = "emailToolStripMenuItem";
             this.emailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.emailToolStripMenuItem.Text = "E-mail";
+            this.emailToolStripMenuItem.Text = "Buscar por E-mail";
             this.emailToolStripMenuItem.Click += new System.EventHandler(this.emailToolStripMenuItem_Click);
             // 
             // exportarContactosToolStripMenuItem
@@ -140,19 +140,19 @@
             // cSVToolStripMenuItem
             // 
             this.cSVToolStripMenuItem.Name = "cSVToolStripMenuItem";
-            this.cSVToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.cSVToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cSVToolStripMenuItem.Text = "CSV";
             // 
             // excelToolStripMenuItem
             // 
             this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
-            this.excelToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.excelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.excelToolStripMenuItem.Text = "Excel";
             // 
             // vCardToolStripMenuItem
             // 
             this.vCardToolStripMenuItem.Name = "vCardToolStripMenuItem";
-            this.vCardToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.vCardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vCardToolStripMenuItem.Text = "vCard";
             // 
             // groupBox1
@@ -219,7 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 397);
             this.Controls.Add(this.dgvContactos);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
